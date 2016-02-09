@@ -1,0 +1,35 @@
+.schedule {
+	&:extend(.table all);
+	margin: 0 -(@table-cell-padding) 1em -(@table-cell-padding);
+	border-collapse: collapse;
+
+	&__avatar {
+		display: block;
+		max-width: 30px;
+		height: auto;
+		border-radius: @border-radius-base;
+	}
+
+	& > tbody > tr > th,
+	& > tbody > tr > td { vertical-align: middle; }
+
+	& > tbody > tr > th&__heading {
+		padding-top: 1em;
+		padding-bottom: .25em;
+		font-size: @font-size-h3;
+		font-weight: @font-weight-normal;
+		font-style: italic;
+		border-top:0;
+	}
+
+	& > tbody > tr > th&__coffee {
+		padding: 2.25em 0;
+		font-size: @font-size-small;
+		text-transform: uppercase;
+		text-align: center;
+		background: url('../img/bean.png') center 1.7em no-repeat;
+	}
+
+	&__coffee-text { text-indent: 8em; }
+	& > tbody > tr.first > td { border-top: 0; }
+}

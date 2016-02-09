@@ -1,0 +1,19 @@
+.partners {
+	.make-row();
+	margin-top: 2em;
+
+	&__item {
+		.make-md-column(4);
+		.make-sm-column(4);
+		.make-xs-column(12);
+		margin-bottom: 2em;
+		list-style: none;
+	}
+
+	&__image {
+		display: block;
+		margin-bottom: 1em;
+	}
+
+	&__text { max-width: 300px; }
+}

@@ -1,0 +1,50 @@
+.map {
+    position: relative;
+    float: left;
+    width: 415px;
+    height: 415px;
+	margin: 1.25em 5em 0 -20px;
+    border: 20px solid #fff;
+	border-radius: 100%;
+    box-shadow: 25px 35px 40px -15px #e2e2e2;
+
+	@media (max-width: @layout-max-width){
+		float: none;
+		width:100%;
+		height:300px;
+		margin:0 0 2em 0;
+		border:0;
+		border-radius:0;
+		box-shadow: 0 15px 40px -15px #e2e2e2;
+	}
+
+	&_loading { background:#eee url('../img/spinner.gif') 50% 52% no-repeat; }
+
+	&-container {
+		overflow: hidden;
+		visibility: hidden;
+		width: 100%;
+		height: 100%;
+		border-radius: 100%;
+		-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+
+		@media (max-width: @layout-max-width){
+			-webkit-mask-image: none;
+		}
+	}
+
+	&-copyright {
+		position: absolute;
+		z-index: 1000;
+		left: 0;
+		right: 0;
+		margin: 5em auto 0;
+		font-size: 9px;
+		font-style: italic;
+		text-align: center;
+
+		@media (max-width: @layout-max-width){
+			display: none;
+		}
+	}
+}

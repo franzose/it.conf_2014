@@ -1,0 +1,16 @@
+.link-dashed {
+	position: relative;
+	color: @link-color;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover { color: @link-hover-color; }
+	&:after {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		content: '';
+		border-bottom: 1px dashed lighten(@link-color, 20%);
+	}
+}

@@ -1,0 +1,24 @@
+* {
+	margin: 0; padding: 0;
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	/*-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;*/
+}
+
+body {
+	font: @font-size-base / @line-height-base @font-family-sans-serif;
+    color: @text-color;
+}
+
+.layout {
+	.center(@layout-max-width);
+	padding:0 1em;
+
+	@media (max-width: @layout-max-width){
+		width: auto;
+		margin: 0;
+	}
+}
